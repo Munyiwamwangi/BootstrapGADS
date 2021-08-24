@@ -13,9 +13,10 @@
     <header>
         <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-primary">
             <div class="container">
+
                 <a class="navbar-brand" href="index.html">
                     <img src="images/pie.png" width="30" height="30" class="d-inline-block align-top" alt="">
-                        Bethany's Pie Shop</a>
+                    Bethany's Pie Shop</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
                     aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -23,10 +24,20 @@
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item active">
-                            <a class="nav-link" href="index.html">Home</a>
+                            <a class="nav-link" href="index.html">Home </a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="allpies.html">Pies</a>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Pies
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="allpies.html">Fruit pies</a>
+                                <a class="dropdown-item" href="allpies.html">Cheese cakes</a>
+                                <a class="dropdown-item" href="allpies.html">Seasonal pies</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="allpies.html">All pies</a>
+                            </div>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="order.html">Order</a>
@@ -51,34 +62,9 @@
             </div>
 
             <div class="row">
-                <!-- <div class="col-md-4 order-md-2 mb-3">
-                    <h4 class="d-flex justify-content-between align-items-center mb-3">
-                        <span>Items in your cart</span>
-                        <span class="badge badge-secondary badge-pill">3</span>
-                    </h4>
-                    <ul class="list-group mb-3">
-                        <li class="list-group-item d-flex justify-content-between lh-condensed">
-                            <div>
-                                <h6 class="my-0">Pumpkin pie</h6>
-                                <small class="text-muted">Count: 2</small>
-                            </div>
-                            <span class="text-muted">$29.80</span>
-                        </li>
-                        <li class="list-group-item d-flex justify-content-between lh-condensed">
-                            <div>
-                                <h6 class="my-0">Apple pie</h6>
-                                <small class="text-muted">Count: 1</small>
-                            </div>
-                            <span class="text-muted">$14.95</span>
-                        </li>
-                        <li class="list-group-item d-flex justify-content-between">
-                            <span>Total </span>
-                            <strong>$44.85</strong>
-                        </li>
-                    </ul>
-                </div> -->
 
-                <div class="col-md-8 order-md-1">
+
+                <div class="col-md-8 offset-2">
                     <h4 class="mb-3">Your address</h4>
                     <form class="needs-validation" action="order.html" method="get" novalidate>
                         <div class="row">
@@ -98,24 +84,24 @@
                                 <div class="input-group-prepend">
                                     <span class="input-group-text">@</span>
                                 </div>
-                                <input type="text" class="form-control" id="email" placeholder="Email" >
+                                <input type="text" class="form-control" id="email" placeholder="Email">
                             </div>
                         </div>
 
                         <div class="mb-3 form-group">
                             <label for="address">Address</label>
-                            <input type="text" class="form-control" id="address" placeholder="Bakery street" >
+                            <input type="text" class="form-control" id="address" placeholder="Bakery street">
                         </div>
 
                         <div class="mb-3">
                             <div class="row">
                                 <div class="col-md-6 mb-3 form-group">
                                     <label for="zip">Zip</label>
-                                    <input type="text" class="form-control" id="zip" placeholder="Zip code" >
+                                    <input type="text" class="form-control" id="zip" placeholder="Zip code">
                                 </div>
                                 <div class="col-md-6 mb-3 form-group">
                                     <label for="city">City</span></label>
-                                    <input type="text" class="form-control" id="city" placeholder="City" >
+                                    <input type="text" class="form-control" id="city" placeholder="City">
                                 </div>
                             </div>
                         </div>
@@ -123,7 +109,7 @@
                         <div class="row">
                             <div class="col-md-4 mb-3 form-group">
                                 <label for="state">State</label>
-                                <select class="custom-select d-block w-100" id="state" >
+                                <select class="custom-select d-block w-100" id="state">
                                     <option value="">Select state...</option>
                                     <option>Not applicable</option>
                                     <option> Alabama</option>
@@ -142,7 +128,7 @@
                             </div>
                             <div class="col-md-5 mb-3 form-group">
                                 <label for="country">Country</label>
-                                <select class="custom-select d-block w-100" id="country" >
+                                <select class="custom-select d-block w-100" id="country">
                                     <option value="">Select country</option>
                                     <option>Belgium</option>
                                     <option>France</option>
@@ -164,21 +150,24 @@
                         <div class="mb-5">
                             <div class="custom-control custom-checkbox">
                                 <input type="checkbox" class="custom-control-input" id="saveShipping">
-                                <label class="custom-control-label" for="saveShipping">Remember my shipping information</label>
+                                <label class="custom-control-label" for="saveShipping">Remember my shipping
+                                    information</label>
                             </div>
                         </div>
 
-                        <button class="btn btn-success btn-lg btn-block mb-3"type="submit">Place your order now!</button>
-                        
-                </form>
+                        <button class="btn btn-success btn-lg btn-block mb-3" type="submit">Place your order
+                            now!</button>
+
+                    </form>
+                </div>
             </div>
-        </div>
     </main>
 
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
     <script src="js/bootstrap.js"></script>
 
-    
+
+
 </body>
 
 </html>
